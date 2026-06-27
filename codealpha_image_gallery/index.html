@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="gallery-section">
+        <h1>Image Gallery</h1>
+        <p>Simple responsive image gallery with filters and lightbox view.</p>
+
+        <div class="filter-buttons">
+            <button class="active" onclick="filterImages('all')">All</button>
+            <button onclick="filterImages('nature')">Nature</button>
+            <button onclick="filterImages('city')">City</button>
+            <button onclick="filterImages('travel')">Travel</button>
+        </div>
+
+        <div class="gallery">
+            <img src="img1.jpg" alt="Gallery Image 1" data-category="nature" onclick="openLightbox(0)">
+            <img src="img2.jpg" alt="Gallery Image 2" data-category="nature" onclick="openLightbox(1)">
+            <img src="img3.jpg" alt="Gallery Image 3" data-category="nature" onclick="openLightbox(2)">
+
+            <img src="img4.jpg" alt="Gallery Image 4" data-category="city" onclick="openLightbox(3)">
+            <img src="img5.jpg" alt="Gallery Image 5" data-category="city" onclick="openLightbox(4)">
+            <img src="img6.jpg" alt="Gallery Image 6" data-category="city" onclick="openLightbox(5)">
+
+            <img src="img7.jpg" alt="Gallery Image 7" data-category="travel" onclick="openLightbox(6)">
+            <img src="img8.jpg" alt="Gallery Image 8" data-category="travel" onclick="openLightbox(7)">
+            <img src="img9.jpg" alt="Gallery Image 9" data-category="travel" onclick="openLightbox(8)">
+        </div>
+    </section>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+        <img id="lightbox-img" src="" alt="Selected Image">
+        <button class="next" onclick="changeImage(1)">&#10095;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
